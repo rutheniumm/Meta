@@ -1,3 +1,3 @@
 # Meta
 
-#A service that computes a interval
+### A public repository dedicated to sharing a raw scripting list.
