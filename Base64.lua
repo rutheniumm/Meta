@@ -30,4 +30,15 @@ function from_base64(data)
     end))
 end
 
-return to_base64, from_base64;
+local function BinaryToString(BinaryString)
+	local String = ""
+	
+	for i, Binary in ipairs(BinaryString:split' ') do --> ex: {"01000001", "01000010", "01000011"}
+		local Byte = tonumber(Binary, 2) -- convert binary (base 2) to ascii character code
+		String ..= string.char(Byte) -- get character from ascii code and append it at end of string
+	end
+	
+	return String
+end
+
+return to_base64, from_base64, BinaryToString;
